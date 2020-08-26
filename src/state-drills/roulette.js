@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class roulette extends React.Componet{
+class roulette extends React.Component{
   state = {
     chamber: null,
     spiningTheChamber: false
@@ -14,23 +14,23 @@ class roulette extends React.Componet{
   }
 
   falseChamber(){
-    this.setState(this.state.chamber = generateNum())
-    this.setState(this.state.spiningTheChamber = false)
+    this.setState({chamber: this.generateNum() })
+    this.setState({spiningTheChamber : false})
   }
 
 
 
   handleButtonClick(){
-    this.setState(this.state.spiningTheChamber = true)
-    setTimeout(falseChamber(), 2000)
+    this.setState({spiningTheChamber: true})
+    setTimeout(() => this.falseChamber(), 2000)
   }
 
 
   display(){
-    const {state} = this.state
-    if (state.spiningTheChamber === true){
+    
+    if (this.state.spiningTheChamber === true){
       return 'spinning the chamber and pulling the trigger! ...'
-    } else if (state.chamber === this.bulletInChamber){
+    } else if (this.state.chamber === this.bulletInChamber){
       return 'BANG!!!!'
     } else {
       return 'You safe man'
@@ -42,7 +42,7 @@ class roulette extends React.Componet{
   render(){
     return (
       <div>
-        <button onclick={() => handleButtonClick()}>Pull The Trigger!</button>
+        <button onClick={() => this.handleButtonClick()}>Pull The Trigger!</button>
         <p>
           {this.display()}
         </p>

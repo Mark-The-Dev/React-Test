@@ -10,7 +10,7 @@ import Counter from './state/Counter'
 import Tabs from './state/Tabs'
 import HelloWorld from './state-drills/HelloWorld'
 import Bomb from './state-drills/Bomb'
-import roulette from './state-drills/roulette'
+import Roulette from './state-drills/Roulette'
 // function App() {
 //   return (
 //     <main className='App'>
@@ -82,9 +82,9 @@ const tabsProp = [
 class App extends React.Component {
   render() {
     return <div>
-      <HelloWorld />
-      <Bomb />
-      <roulette />
+      {/* <HelloWorld />
+      <Bomb /> */}
+      <Roulette />
     </div>
   }
 }
