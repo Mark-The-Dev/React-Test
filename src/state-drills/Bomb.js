@@ -5,11 +5,12 @@ class Bomb extends Component {
         super(props);
         this.state = { count: 0 }
     }
+
     componentDidMount(){
-         let newCount = this.state.count + 1;
+        
 
         this.interval = setInterval(()=> {
-            this.setState({count: newCount})
+            this.setState(({count}) => ({ count: this.state.count+ 1 }))
         }, 1000)
         console.log(this.state)
     }
