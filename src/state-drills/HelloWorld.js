@@ -5,20 +5,23 @@ import React from 'react'
 
 class HelloWorld extends React.Component {
   state= {
-    who: null
+    who: "nothing"
   }
-  handleButtonClick(e) => {
-    console.log('hi')
+  handleButtonClick(e) {
+    this.setState({
+      who: e
+    })
   }
 
 
   render () {
     return (
       <div>
-        <button onClick={() => this.handleButtonClick()}>Friend</button>
-        <button onClick={() => this.handleButtonClick()}>React</button>
-        <button onClick={() => this.handleButtonClick()}>World</button>
-        Hello, {who}
+        <button onClick={() => this.handleButtonClick('Friend!')}>Friend</button>
+        <button onClick={() => this.handleButtonClick('React!')}>React</button>
+        <button onClick={() => this.handleButtonClick('World!')}>World</button>
+    <p>Hello, {this.state.who}</p>
+
       </div>
     )
 
