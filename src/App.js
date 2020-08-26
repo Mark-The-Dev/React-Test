@@ -10,6 +10,7 @@ import Counter from './state/Counter'
 import Tabs from './state/Tabs'
 import HelloWorld from './state-drills/HelloWorld'
 import Bomb from './state-drills/Bomb'
+import roulette from './state-drills/roulette'
 // function App() {
 //   return (
 //     <main className='App'>
@@ -83,6 +84,7 @@ class App extends React.Component {
     return <div>
       <HelloWorld />
       <Bomb />
+      <roulette />
     </div>
   }
 }
