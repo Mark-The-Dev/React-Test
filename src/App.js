@@ -9,6 +9,7 @@ import TheDate from './state/TheDate'
 import Counter from './state/Counter'
 import Tabs from './state/Tabs'
 import HelloWorld from './state-drills/HelloWorld'
+import Bomb from './state-drills/Bomb'
 // function App() {
 //   return (
 //     <main className='App'>
@@ -81,6 +82,7 @@ class App extends React.Component {
   render() {
     return <div>
       <HelloWorld />
+      <Bomb />
     </div>
   }
 }
